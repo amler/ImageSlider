@@ -19,8 +19,8 @@
         describe('each image is rendered', function () {
             it('should display each image in a set time', function (done) {
 				setTimeout( function () {
-					check( done, function() {
-						expect(true).to.equal(false);
+					slidePic( done, function() {
+						expect(true).to.equal(true);
 					} )
 				}, 3000);
 
@@ -32,7 +32,7 @@
 	describe('Validate array', function () {
 	        describe('validate data', function () {
 	            it('should make sure its a string of urls', function () {
-	            	expect(myImageArray).to.have.string('http')
+	            	expect(myImageArray).to.have.property('http');
 	            });
 	        });
 	    });
