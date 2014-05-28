@@ -12,14 +12,29 @@ function createSlideshow () {
 	    $('.slides').append('<img class = "pics" src=' + photo  + ' //>')
 	});
 	
-	setTimeout(function() {
+	/*setTimeout(function() {
 		$('.slides').animate({marginLeft: '-=400px'}, 500);
-	}, 3000);
-	
-
+		
+		
+	}, 3000);*/
 
 }
+
 createSlideshow();
+
+var myVar = setInterval(function(){slidePic()}, 1000);
+
+function slidePic () {
+	$('.slides').animate({marginLeft: '-=400px'}, 500);	
+}
+
+function myStopFunction() {
+    clearInterval(myVar);
+}
+
+
+
+
 
 
 /*

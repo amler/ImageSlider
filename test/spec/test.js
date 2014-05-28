@@ -7,7 +7,7 @@
         describe('Image slider with images', function () {
             
             it('should inject the correct number of image tags', function () {
-            	var total = $('.container .pics').length
+            	var total = $('.container > .pics').length
             	console.log(total);
             	expect(total).to.equal(myImageArray.length)
             });
@@ -23,10 +23,10 @@
     });
 	
 
-	describe('Give it some context', function () {
+	describe('Validate array', function () {
 	        describe('validate data', function () {
 	            it('should make sure its a string of urls', function () {
-
+	            	expect(myImageArray).to.have.string('http')
 	            });
 	        });
 	    });

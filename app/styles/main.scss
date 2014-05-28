@@ -8,13 +8,17 @@ body {
     padding: 0;
 }
 .slide-show {
+    position: relative;
     border: 1px solid red;
     margin: 50px auto;
     width: 400px;
     height: 300px;
     overflow: hidden;
+    background-color: blue;
 
     .slides {
+        position: absolute;
+        top: 0;
         margin: 0;
         padding: 0;
         background-color: red;
