@@ -7,9 +7,10 @@
         describe('Image slider with images', function () {
             
             it('should inject the correct number of image tags', function () {
-            	var total = $('.container > .pics').length
+            	createSlideshow(myImageArray);
+            	var total = $('.slides .pics').length;
             	console.log(total);
-            	expect(total).to.equal(myImageArray.length)
+            	expect(total).to.equal(myImageArray.length);
             });
         });
     });
