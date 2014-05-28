@@ -17,7 +17,12 @@
 
     describe('Image Interval', function () {
         describe('each image is rendered', function () {
-            it('should display each image in a set time', function () {
+            it('should display each image in a set time', function (done) {
+				setTimeout( function () {
+					check( done, function() {
+						expect(true).to.equal(false);
+					} )
+				}, 3000);
 
             });
         });
