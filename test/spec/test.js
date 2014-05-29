@@ -26,7 +26,7 @@
 	      	});
 
 	      	it("should only contain 3 images - in case client specific.", function(){
-	      	
+	      		
 	        	expect(myImageArray.length).to.equal(3)
 
 	      	});
@@ -59,22 +59,19 @@
         		expect(total).to.equal(imageCount);
         	});
 
-	      	
+	      	/*
 	      	it('should have method that accepts the image arry as an argument and renders to the target' function (){  
 	      		var imageSlider = new Slideshow(myImageArray);
 	      		var target = $('.slides');
 	      		console.log(imageSlider);
-		        expect(imageSlider).itself.to.respondTo('renderImage', 'myImageArray');
+		        expect(imageSlider).itself.to.respondTo('renderImage', 'myImageArray', 'target');
 
-
-				/*function test () {
-				  expect(arguments).to.be.arguments;
-				}*/
 	      	});
 
-        	/*
-    		it('should display each image during an interval', function (done) {
-
+        	
+    		it('should have a method that slides the target during a set interval', function (done) {
+*/
+            	/*
             	this.timeout(5000);
 	            	setTimeout( function () {
 		            	expect($('.slides .pics').to.equal(myImageArray[0]);
@@ -82,8 +79,16 @@
 					
 		           // need additional work on set timout divided 10000 milliseconds by 3 	
 				}, 3333);
+				*/
+        /*    });
 
-            });*/
+			it('should have a method to ', function () {
+				var imageCount = myImageArray.length;
+				var total = $('.slides .pics').length;
+				//console.log(total);
+				expect(total).to.equal(imageCount);
+			});
+*/
 
 
 		});

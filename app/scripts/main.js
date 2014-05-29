@@ -5,9 +5,11 @@ var myImageArray = [
 ];
 
 var current = 0;
-//var targetDiv = $('.slides');
+var targetDiv = $('.slides');
+var displayTime = 1000;
 
-function Slideshow (array, targetDiv) {
+function Slideshow (array) {
+
 	this.renderImage = function () {
 							array.forEach(function (photo) {
 	    						targetDiv.append('<img class = "pics" src=' + photo  + ' />');
@@ -26,12 +28,16 @@ var arrayValidator = function(array){
 	}
 	else {
 		var imageSlider = new Slideshow(array);
+		imageSlider.renderImage();
 	}
 }
+
 arrayValidator(myImageArray);
 
 
-/*function createSlideshow () {
+/*var current = 0;
+
+function createSlideshow () {
 	
 	myImageArray.forEach(function (photo) {
 	    $('.slides').append('<img class = "pics" src=' + photo  + ' />')
@@ -46,12 +52,12 @@ function slidePic () {
 	// count up 1
 	current +=1;
 	// after counting up to the length of the array reset.
-	if (current>= myImageArray.length) {
+	if ( current >= myImageArray.length ) {
 		current = 0;
 	}
 	// move back -400 for current 
 	var position = current * -400;
 
 	$('.slides').animate({marginLeft: position}, 500);	
-}
-*/
+}*/
+
