@@ -59,14 +59,17 @@
         		expect(total).to.equal(imageCount);
         	});
 
-	      	it('should have method that accepts the image arry as an argument and loops' function (){  
-		        Slideshow.should.have.property('renderImage', array);
+	      	
+	      	it('should have method that accepts the image arry as an argument and renders to the target' function (){  
+	      		var imageSlider = new Slideshow(myImageArray);
+	      		var target = $('.slides');
+	      		console.log(imageSlider);
+		        expect(imageSlider).itself.to.respondTo('renderImage', 'myImageArray');
 
 
-
-				function test () {
+				/*function test () {
 				  expect(arguments).to.be.arguments;
-				}
+				}*/
 	      	});
 
         	/*
@@ -82,13 +85,9 @@
 
             });*/
 
-        	it('should be awesome', function () {
 
-        	});
 		});
     });
-
-
 })();
 
 
