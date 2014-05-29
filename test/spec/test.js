@@ -11,8 +11,8 @@
 				"http://goo.gl/B6Yg7e"
 			];
 
-	      	it("should only accept an array for images as an argument.", function(){
-	        	var emptyArray = function () {
+			it("should only accept an array for images as an argument.", function(){
+				var emptyArray = function () {
 	        		slideshow([]);
 	        	}
 	        	expect(emptyArray).to.throw(Error)
@@ -31,7 +31,7 @@
 
 	      	});
 
-	      	it("should assert that the target is an instance of constructor.", function(){
+	      	it("should create an instance of constructor.", function(){
         
 				var imageSlider = new Slideshow(myImageArray);
 				expect(imageSlider).to.be.an.instanceof(Slideshow);
@@ -48,13 +48,25 @@
 	    });
     });
 
-	describe("Slideshow()", function(){
-        describe('Slideshow constructor should have methods', function () {
-
-	      	it("should accept an array as an argument and render each image to the DOM.", function(){
-	      		forEac
-	      	});
 	
+	describe("Slideshow()", function(){
+	    describe('Slideshow constructor should have methods', function () {
+
+	      	it("should have method that iterates each array an returns to the DOM.", function(){
+	      		// probably too granular...
+	      		expect($('.slides > img:first-child')to.equal(myImageArray[0])
+	      	});
+
+	      	it('should inject the correct number of image tags', function () {
+				var imageCount = myImageArray.length;
+				var total = $('.slides .pics').length;
+				console.log(total);
+        		expect(total).to.equal(imageCount);
+        	});
+		});
+    });
+
+
 })();
 
 
@@ -67,12 +79,7 @@
 
   /*  describe('Create Slideshow', function () {
             
-        it('should inject the correct number of image tags', function () {
-        	var imageCount = myImageArray.length;
-        	var total = $('.slides .pics').length;
-        	console.log(total);
-        	expect(total).to.equal(imageCount);
-        });
+        
    describe('Slide Pic', function () {
         describe('Images slideshow ', function () {
             it('Images should match the array as the slideshow progresses', function (done) {
