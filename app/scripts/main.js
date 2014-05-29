@@ -4,15 +4,19 @@ var myImageArray = [
 	"http://goo.gl/B6Yg7e"
 ];
 
+var current = 0;
+//var targetDiv = $('.slides');
 
-function Slideshow (array) {
+function Slideshow (array, targetDiv) {
 	this.renderImage = function () {
-							myImageArray.forEach(function (photo) {
-	    						$('.slides').append('<img class = "pics" src=' + photo  + ' />');
+							array.forEach(function (photo) {
+	    						targetDiv.append('<img class = "pics" src=' + photo  + ' />');
 							});
-						}
+						};
+	//this.imgSlide =					
 
-};
+}
+
 
 var arrayValidator = function(array){
 	if (!$.isArray(array)) {
@@ -27,24 +31,14 @@ var arrayValidator = function(array){
 arrayValidator(myImageArray);
 
 
-
-
 /*function createSlideshow () {
 	
 	myImageArray.forEach(function (photo) {
-	    $('.slides').append('<img class = "pics" src=' + photo  + ' />');
+	    $('.slides').append('<img class = "pics" src=' + photo  + ' />')
 	});
 	// after rendering set interval
-	//var myVar = setInterval(function(){slidePic()}, 1000);
-}*/
-
-
-/*var imagegGallery = new Slideshow*/
-
-/*
-var current = 0;
-
-
+	var myVar = setInterval(function(){slidePic()}, 1000);
+}
 
 createSlideshow();
 
