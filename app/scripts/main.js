@@ -4,21 +4,17 @@ var myImageArray = [
 	"http://goo.gl/B6Yg7e"
 ];
 
-var current = 0;
 var targetDiv = $('.slides');
-var displayTime = 1000;
+// var displayTime = 1000;
 
 function Slideshow (array) {
 
 	this.renderImage = function () {
 							array.forEach(function (photo) {
-	    						targetDiv.append('<img class = "pics" src=' + photo  + ' />');
+								targetDiv.append('<img class = "pics" src=' + photo  + ' />');
 							});
 						};
-	//this.imgSlide =					
-
 }
-
 
 var arrayValidator = function(array){
 	if (!$.isArray(array)) {
@@ -30,23 +26,11 @@ var arrayValidator = function(array){
 		var imageSlider = new Slideshow(array);
 		imageSlider.renderImage();
 	}
-}
+};
 
 arrayValidator(myImageArray);
 
-
-/*var current = 0;
-
-function createSlideshow () {
-	
-	myImageArray.forEach(function (photo) {
-	    $('.slides').append('<img class = "pics" src=' + photo  + ' />')
-	});
-	// after rendering set interval
-	var myVar = setInterval(function(){slidePic()}, 1000);
-}
-
-createSlideshow();
+var current = 0;
 
 function slidePic () {
 	// count up 1
@@ -58,6 +42,19 @@ function slidePic () {
 	// move back -400 for current 
 	var position = current * -400;
 
-	$('.slides').animate({marginLeft: position}, 500);	
-}*/
+	$('.slides').animate({marginLeft: position}, 500);
+}
+
+function createSlideshow () {
+	
+	myImageArray.forEach(function (photo) {
+	    $('.slides').append('<img class = "pics" src=' + photo  + ' />');
+	});
+	// after rendering set interval
+	setInterval(function() {
+		slidePic();
+	}, 1000);
+}
+
+createSlideshow();
 
